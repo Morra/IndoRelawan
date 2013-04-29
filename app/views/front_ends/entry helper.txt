@@ -1,0 +1,125 @@
+<?php
+/**
+ * Alpha Entry Helpers File
+ * 
+ * @author		ndog <handika_bahari@yahoo.co.id>
+ * 
+ * @version		1.0
+ */
+
+/**
+ * Get Entry Meta
+ *
+ * @return string;
+ */
+
+function getEntryMeta($entryId=null,$metaKey=null){
+	if (empty($entryId) and empty($metaKey))
+		return false;
+	else
+		return $meta = EntryMeta::where('entry_id', '=', $entryId)->where('meta_key', '=', $metaKey)->first();
+}
+
+/**
+ * Get Content
+ *
+ * @return string;
+ */
+
+function getContent($entryId=null){
+	if (empty($entryId))
+		return false;
+	else
+		return $entry = Entry::find($entryId)->only('content');
+}
+
+/**
+ * Get Title
+ *
+ * @return string;
+ */
+
+function getTitle($entryId=null){
+	if (empty($entryId))
+		return false;
+	else
+		return $entry = Entry::find($entryId)->only('title');
+}
+
+/**
+ * Get Excerpt
+ *
+ * @return string;
+ */
+
+function getExcerpt($entryId=null){
+	if (empty($entryId))
+		return false;
+	else
+		return $entry = Entry::find($entryId)->only('excerpt');
+}
+
+/**
+ * Get Related Entry
+ *
+ * @return string;
+ */
+
+function getRelatedEntry(){
+
+}
+
+/**
+ * Get Next Entry
+ *
+ * @return string;
+ */
+
+function getNextEntry($entryId=null,$field='id',$order='asc'){
+	if (empty($entryId))
+		return false;
+	else
+	{
+		if($order == 'asc')
+			$operator = '>';
+		else
+			$operator = '<';
+			
+		$entry = Entry::find($entryId);
+		return Entry::where('id', $operator, $entryId)->where('status', '=', $entry->status)->where('entry_parent', '=', $entry->entry_parent)->order_by($field, $order)->take(1)->get();
+	}
+}
+
+/**
+ * Get Previous Entry
+ *
+ * @return string;
+ */
+
+function getPreviousEntry($entryId=null,$field='id',$order='asc'){
+	if (empty($entryId))
+		return false;
+	else
+	{
+		if($order == 'asc')
+			$operator = '<';
+		else
+			$operator = '>';
+			
+		$entry = Entry::find($entryId);
+		return Entry::where('id', $operator, $entryId)->where('status', '=', $entry->status)->where('entry_parent', '=', $entry->entry_parent)->order_by($field, $order)->take(1)->get();
+	}
+}
+
+/**
+ * Get Entry Childs
+ *
+ * @return string;
+ */
+
+function getEntryChilds($entryId=null,$depth=3){
+	if($entryId != null)
+		return true;
+	else
+		return false;
+}

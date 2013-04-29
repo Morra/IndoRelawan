@@ -1,0 +1,38 @@
+@import url('core.css');
+
+/*CUSTOM CONFIGURATION INSERT HERE!!!!*/
+html{ min-height: 100%; }
+body{ font-family: 'Helvetica','arial','sans-serif'; padding-top: 60px;	padding-bottom: 40px;
+//background: rgb(228,247,251); /* Old browsers */
+//background: -moz-linear-gradient(top, rgb(228,247,251) 0%, rgb(255,255,255) 100%); /* FF3.6+ */
+//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(228,247,251)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+//background: -webkit-linear-gradient(top, rgb(228,247,251) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+//background: -o-linear-gradient(top, rgb(228,247,251) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+//background: -ms-linear-gradient(top, rgb(228,247,251) 0%,rgb(255,255,255) 100%); /* IE10+ */
+//background: linear-gradient(top, rgb(228,247,251) 0%,rgb(255,255,255) 100%); /* W3C */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f7fb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+/* TOOLS */
+.clear {clear:both !important;}
+
+/* ABAS CSS */
+.normal-checkbox{float:left; position: relative; top: 10px}
+.group-checkbox{margin-bottom: 5px !important;}
+.label-checkbox{text-align:left !important;}
+
+.input-append input[class*="span"], .input-append .uneditable-input[class*="span"], .input-prepend input[class*="span"], .input-prepend .uneditable-input[class*="span"], .row-fluid .input-prepend [class*="span"], .row-fluid .input-append [class*="span"]{ margin-left: -4px; }
+
+.layout-body .content .inner-header{ position: relative; }
+.input-prepend, .input-append{ text-align: right; }
+
+/* Validation */
+label.val_error { color: #ff0000; }
+
+/* User Guides */
+.bx-prev, .bx-next { display: none; }
+.pager { text-align: left; }
+.pager h2.title-guide { text-transform: none !important; }
+
+/* Order */
+.ui-helper-hidden-accessible { display: none; }

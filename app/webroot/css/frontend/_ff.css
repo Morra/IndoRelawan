@@ -1,0 +1,43 @@
+/* 
+  CSS        : Level 3
+  Created on : Tue, 29 Jan 2013 13:22:07 GMT
+  Author     : danz (@rdanzkusuma)
+  Description: Morra - Indorelawan
+*/
+
+
+/* @Font-Face Stylesheet */
+@font-face {
+  font-family: 'segoeui';
+  src: url('../../fonts/segoeuisl.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/segoeuisl.ttf'),
+       url('../../fonts/segoeuisl.svg'),
+       url('../../fonts/segoeuisl.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'exo';
+  src: url('../../fonts/exoregular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/exoregular.ttf'),
+       url('../../fonts/exoregular.svg'),
+       url('../../fonts/exoregular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'exothin';
+  src: url('../../fonts/exothin.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/exothin.ttf'),
+       url('../../fonts/exothin.svg'),
+       url('../../fonts/exothin.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face { font-family: 'alegreyaitalic'; src: url('../../fonts/Alegreya-Italic.otf'); }
+
+@font-face { font-family: 'helveticaneueb'; src: url('../../fonts/HelveticaNeue-Bold.otf'); }
+
+@font-face { font-family: 'helveticaneuecb'; src: url('../../fonts/HelveticaNeue-CondensedBold.ttf'); }
+/* @Font-Face Stylesheet */
